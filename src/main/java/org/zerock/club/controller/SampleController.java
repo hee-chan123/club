@@ -30,8 +30,11 @@ public class SampleController {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-//    @PreAuthorize("hasRole('User')")
-    @PreAuthorize("permitAll()")
+    @GetMapping("/accessDenied")
+    public void accessDenied(){
+
+    }
+
     @GetMapping("/all")
     public void exAll(){
         log.info("exAll..........");
